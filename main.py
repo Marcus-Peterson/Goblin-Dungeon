@@ -69,19 +69,18 @@ def characterChoice():
     print("ℭ𝔥𝔬𝔬𝔰𝔢 𝔶𝔬𝔲𝔯 𝔠𝔥𝔞𝔯𝔞𝔠𝔱𝔢𝔯")
     print("♝𝔐𝔞𝔤𝔢♝\n, ♚𝔚𝔞𝔯𝔯𝔦𝔬𝔯♚\n, ♞ℜ𝔬𝔲𝔤𝔢♞\n, ♛ℌ𝔢𝔞𝔩𝔢𝔯♛\n")
     player = input(" ") 
+    global player selection
     while player != str(Available_Characters):    #This will make sure that Player input is resevered to character selection
-        global player_selection
         if player == "Mage" or "mage":
             print("These are the stats for: ♝𝔐𝔞𝔤𝔢♝")
             
             m = Mage()
             print(f"Attack DMG: {m.attack}, Defense: {m.defense}, {m.health}")
             print(f"Mage special ability(Fireball): Throw a fireball at an enemy causing {m.ability_stats} dmg of targets health")
-            player_selection
             player_selection = "Mage"
             player = m
         
-        if Player == "Warrior" or "warrior":
+        if player == "Warrior" or "warrior":
             print("These are the stats for: ♚𝔚𝔞𝔯𝔯𝔦𝔬𝔯♚")
             
             w = Warrior()
@@ -92,22 +91,22 @@ def characterChoice():
             player = m
             
         
-        if Player == "Rouge" or "rouge":
+        if player == "Rouge" or "rouge":
             print("These are the stats for: ♞ℜ𝔬𝔲𝔤𝔢♞")
             
             r = Rouge()
             print(f"Attack DMG: {r.attack}, Defense: {r.defense}, {r.health}")
             print(f"Rouge special ability(Sneak): {r.ability_stats} dmg of targets health")
-            player_selection
+            
             player_selection = "Rouge"
             player = r
         
-        if Player == "Healer" or "healer":
+        if player == "Healer" or "healer":
             print("These are the stats for: ♛ℌ𝔢𝔞𝔩𝔢𝔯♛")
             h = Healer()
             print(f"Attack DMG: {h.attack}, Defense: {h.defense}, {h.health}")
             print(f"Healer special ability(Healing): Heal yourself by {h.ability_stats}% your damaged health")
-            player_selection
+    
             player_selection = "Healer"
             player = h
         
